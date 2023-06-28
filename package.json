@@ -10,7 +10,8 @@
     "db:migrate": "npx sequelize db:migrate",
     "seed:generate:users": "npx sequelize seed:generate --name users",
     "db:seed": "npx sequelize db:seed:all",
-    "db:start": "npx sequelize db:create && npx sequelize db:migrate"
+    "db:start": "npx sequelize db:create && npx sequelize db:migrate",
+    "dbr": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,7 @@
     "@babel/preset-env": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
     "@babel/register": "^7.22.5",
+    "bcrypt": "^5.1.0",
     "cookie-parser": "^1.4.6",
     "express": "^4.18.2",
     "morgan": "^1.10.0",

@@ -8,13 +8,13 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate({ User, Card }) {
-      this.belongsTo(User, { foreignKey: 'users_id' });
-      this.belongsTo(Card, { foreignKey: 'cards_id' });
+      // this.belongsTo(User, { foreignKey: 'user_id' });
+      // this.belongsTo(Card, { foreignKey: 'card_id' });
     }
   }
   Statistic.init(
     {
-      users_id: {
+      user_id: {
         allowNull: false,
         type: DataTypes.INTEGER,
         references: {
@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         onDelete: 'CASCADE',
       },
-      cards_id: {
+      card_id: {
         allowNull: false,
         type: DataTypes.INTEGER,
         references: {
@@ -34,6 +34,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       studied: {
         allowNull: false,
+        defaultValue: false,
         type: DataTypes.BOOLEAN,
       },
     },

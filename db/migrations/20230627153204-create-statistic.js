@@ -9,7 +9,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      users_id: {
+      user_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
@@ -18,7 +18,7 @@ module.exports = {
         },
         onDelete: 'CASCADE',
       },
-      cards_id: {
+      card_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
