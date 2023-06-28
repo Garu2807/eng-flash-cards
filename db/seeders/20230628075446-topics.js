@@ -10,7 +10,7 @@ module.exports = {
           topic: 'food',
           Cards: [
             {
-              word: 'Apple',
+              word: 'App le',
               translate: 'Яблоко',
             },
             {
