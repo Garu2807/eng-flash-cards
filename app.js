@@ -5,6 +5,7 @@ const ssr = require('./middlewares/ssr');
 
 const mainRouter = require('./routes/views/main.routes');
 const registerRouter = require('./routes/views/reglog.routes');
+const authRouter = require('./routes/api/auth.routes')
 const app = express();
 const PORT = 3000;
 
@@ -17,5 +18,6 @@ app.use(express.static(path.join(__dirname, './public/')));
 app.use(ssr);
 app.use('/', mainRouter);
 app.use('/', registerRouter);
+// app.use('/api/auth', authRouter);
 
 app.listen(PORT, () => console.log(`Server${PORT}`));
