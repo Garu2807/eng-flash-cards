@@ -1,8 +1,8 @@
 {
-  "name": "project-memory-cards",
+  "name": "eng-flash-cards",
   "version": "1.0.0",
   "description": "Привет! Моя идея приложения - это флеш карты для запоминания английских слов. Приложение должно давать возможность создавать новые карточки, тренироваться в их запоминании и отслеживать прогресс.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js --ext js,jsx,json"
@@ -20,10 +20,10 @@
   "homepage": "https://github.com/Garu2807/eng-flash-cards#readme",
   "devDependencies": {
     "eslint": "^8.43.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.25.3",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "nodemon": "^1.14.9"
   },

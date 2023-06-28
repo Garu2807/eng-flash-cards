@@ -10,9 +10,9 @@ function renderComponentMethod(component, props, options = { doctype: true }) {
 }
 
 function ssr(req, res, next) {
-  /*   обогащаем наш объект res новой функцией, которую будет вызывать позже в наших роутах */
+
   res.renderComponent = renderComponentMethod;
-  /*   обязательно отправляем запрос дальше в функцию */
+
   next();
 }
 

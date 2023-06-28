@@ -4,7 +4,8 @@ const Layout = require('./Layout');
 function MainPage() {
   return (
     <Layout title="name">
-      <h1>Привет</h1>
+      <h1>Привет!</h1>
+      <h2>Что бы продолжить - зарегистрируйся или войди</h2>
     </Layout>
   );
 }
