@@ -12,6 +12,7 @@ module.exports = {
       {
         card_id: 2,
         user_id: 1,
+        studied: true,
       },
       {
         card_id: 3,
