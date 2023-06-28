@@ -1,8 +1,8 @@
 {
-  "name": "project-memory-cards",
+  "name": "eng-flash-cards",
   "version": "1.0.0",
   "description": "Привет! Моя идея приложения - это флеш карты для запоминания английских слов. Приложение должно давать возможность создавать новые карточки, тренироваться в их запоминании и отслеживать прогресс.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "db:create": "npx sequelize db:create",
@@ -31,7 +31,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^1.14.9"
   },
   "dependencies": {
     "@babel/core": "^7.22.5",
