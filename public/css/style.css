@@ -1,0 +1,22 @@
+nav {
+  text-align: center;
+  padding-top: 20px;
+}
+#form-login {
+  text-align: center;
+  padding-top: 70px;
+}
+#form-register {
+  text-align: center;
+  padding-top: 70px;
+}
+
+.form-control {
+  width: 330px;
+}
+.logreg {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 110px;
+  padding-right: 10px;
+}
