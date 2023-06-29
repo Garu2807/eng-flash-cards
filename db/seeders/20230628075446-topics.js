@@ -23,6 +23,40 @@ module.exports = {
             },
           ],
         },
+        {
+          topic: 'animals',
+          Cards: [
+            {
+              word: 'Lyon',
+              translate: 'Лев',
+            },
+            {
+              word: 'Dog',
+              translate: 'Собака',
+            },
+            {
+              word: 'Cat',
+              translate: 'Кошка',
+            },
+          ],
+        },
+        {
+          topic: 'body',
+          Cards: [
+            {
+              word: 'Arm',
+              translate: 'Рука',
+            },
+            {
+              word: 'Face',
+              translate: 'Лицо',
+            },
+            {
+              word: 'Head',
+              translate: 'Голова',
+            },
+          ],
+        },
       ],
       {
         include: [Card],
@@ -31,6 +65,10 @@ module.exports = {
     await User.bulkCreate([
       {
         login: 'Gagik',
+        password: await bcrypt.hash('123', 10),
+      },
+      {
+        login: 'Klimovsky',
         password: await bcrypt.hash('123', 10),
       },
     ]);
