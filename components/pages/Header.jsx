@@ -7,13 +7,11 @@ function Header({ user }) {
     contentNavBar = (
       <>
         <div>{`Привет, ${user.login}!`}</div>
-        <a href="/">
-          Главная
-        </a>
-        <a href="/profile">
+        <a href="/">Главная</a>
+        <a href="/profile" className="btn btn-info">
           Профиль
         </a>
-        <a href="/logout">
+        <a href="/logout" className="btn btn-dark">
           Выйти
         </a>
       </>
@@ -22,8 +20,14 @@ function Header({ user }) {
     contentNavBar = (
       <>
         <div>Привет!</div>
-        <a href="/register" className="a">Регистрация</a>
-        <a href="/login" className="a">Вход</a>
+        <div className="logreg">
+          <a href="/register" className="btn btn-info">
+            Регистрация
+          </a>
+          <a href="/login" className="btn btn-dark">
+            Вход
+          </a>
+        </div>
       </>
     );
   }
@@ -32,14 +36,12 @@ function Header({ user }) {
     <header>
       <nav>
         <div className="container">
-          <a href="/">
-          </a>
+          <a href="/"></a>
           <div>{contentNavBar}</div>
         </div>
       </nav>
     </header>
   );
 }
-
 
 module.exports = Header;
