@@ -1,17 +1,21 @@
-const React = require('react')
+const React = require('react');
+const Layout = require('../../components/pages/Layout');
 
+function CardsPage({ cards, topic, user }) {
+  return (
+    <Layout user={user}>
+      <h1>{topic.topic}</h1>
+      <div class="container"></div>
+      <div>
+        {cards.map((card) => (
+          <>
+            <div>{card.word}</div>
+            <div>{card.translate}</div>
+          </>
+        ))}
+      </div>
+    </Layout>
+  );
+}
 
-function CardsPage({card, topic}) {
-    return (
-        <Layout>
-          <h1>{topic.topic}</h1>
-          <div class="container"></div>
-          <div class="card">
-          <p>{card.word}</p>
-          <p>{card.translate}</p>
-          </div>
-        </Layout>
-      );
-    }
-
-module.exports = CardsPage
+module.exports = CardsPage;

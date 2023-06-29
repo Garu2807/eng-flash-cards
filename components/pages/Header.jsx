@@ -2,7 +2,6 @@ const React = require('react');
 
 function Header({ user }) {
   let contentNavBar;
-
   if (user) {
     contentNavBar = (
       <>

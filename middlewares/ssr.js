@@ -2,7 +2,7 @@ const React = require('react');
 const ReactDOMServer = require('react-dom/server');
 
 function renderComponentMethod(component, props, options = { doctype: true }) {
-  const el = React.createElement(component, props);
+  const el = React.createElement(component, {...props, ...this.locals});
 
   const html = ReactDOMServer.renderToStaticMarkup(el);
 

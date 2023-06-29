@@ -1,16 +1,16 @@
 const React = require('react');
 const Header = require('./Header')
 
-function Layout({ title, children }) {
+function Layout({ title, children, user }) {
   return (
     <html lang="ru">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{title}</title>
         <link rel="stylesheet" href="/css/style.css" />
       </head>
       <body>
-        <Header />
+        <Header user={user} />
         {children}
       </body>
     </html>
