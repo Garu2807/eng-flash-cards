@@ -13,13 +13,13 @@ function RegisterForm({ user }) {
         <div className="mb-3">
           <label className="form-label">
             Логин
-            <input type="text" className="form-control" name="login" />
+            <input required type="text" className="form-control" name="login" />
           </label>
         </div>
         <div className="mb-3">
           <label className="form-label">
             Пароль
-            <input type="password" className="form-control" name="password" />
+            <input required type="password" className="form-control" name="password" />
           </label>
         </div>
         <button type="submit" className="btn btn-outline-warning">

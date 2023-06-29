@@ -4,19 +4,35 @@ const { User } = require('../../db/models')
 
 router.post('/register', async(req,res) => {
     const { login, password } = req.body
-    try {
-        const newUser = await User.create({
-            login,
-            password: await bcrypt.hash(password, 10),
-        })
+    
+  try {
+    if (login && password) {
+      /* Ищёт пользователя с таким логином в базе */
+      let newUser = await User.findOne({ where: { login } });
+      /* Если не нашёл — регистрирует */
+      if (!newUser) {
+        newUser = await User.create({
+          login,
+          /* хэшируем пароль */
+          password: await bcrypt.hash(password, 10),
+        });
 
-        req.session.userId= newUser.id;
-        // res.locals.user = newUser;
-        res.json({message:'success'})
-    } catch (error) {
-        res.status(500).json({message: error.message})   
+        // авторизация - запоминаем пользователя
+        // req.session - хранилище сессии, которое уникально для каждого браузера
+        req.session.userId = newUser.id;
+        res.locals.user = newUser;
+
+        res.status(201).json({ message: 'ok' });
+      } else {
+        res.status(400).json({ message: 'Такой пользователь уже существует' });
+      }
+    } else {
+      res.status(400).json({ message: 'Заполните все поля' });
     }
-})
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
 
 router.post('/login', async (req, res) => {
     const {login, password} = req.body;
@@ -37,8 +53,8 @@ router.post('/login', async (req, res) => {
         }
         else {
             req.session.userId = user.id;
-            console.log(user, '???????????');
-            // res.locals.user = user;
+     
+            res.locals.user = user;
             res.json({message: 'ok'})
         }
     

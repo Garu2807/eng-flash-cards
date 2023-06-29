@@ -10,6 +10,9 @@ function Header({ user }) {
         <a href="/profile" className="btn btn-info">
           Профиль
         </a>
+        <a href="/topic" className="btn btn-info">
+          Выбор темы
+        </a>
         <a href="/logout" className="btn btn-dark">
           Выйти
         </a>
