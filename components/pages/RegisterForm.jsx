@@ -4,7 +4,7 @@ const Layout = require('./Layout');
 function RegisterForm({ user }) {
     return(
         <Layout user={user}>
-      <form action = '/register'  id="form-register" method = 'POST'>
+      <form action = '/api/auth/register'  id="form-register" method = 'POST'>
         <h2>Регистрация</h2>
         <div>
           <label className="form-label">
@@ -22,6 +22,7 @@ function RegisterForm({ user }) {
           Зарегистрироваться
         </button>
       </form>
+      <script defer src="/js/auth.js" />
     </Layout>
     );
 }
