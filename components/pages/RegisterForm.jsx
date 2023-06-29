@@ -1,11 +1,10 @@
 const React = require('react');
 const Layout = require('./Layout');
-
 function RegisterForm({ user }) {
   return (
     <Layout user={user}>
       <form
-        action="/register"
+        action="api/auth/register"
         id="form-register"
         method="POST"
         style={{ marginTop: '30px' }}
@@ -27,6 +26,7 @@ function RegisterForm({ user }) {
           Зарегистрироваться
         </button>
       </form>
+      <script defer src="/js/auth.js" />
     </Layout>
   );
 }

@@ -1,11 +1,10 @@
 const React = require('react');
 const Layout = require('./Layout');
-
 function LoginForm({ user }) {
   return (
     <Layout user={user}>
       <form
-        action="/login"
+        action="/api/auth/login"
         id="form-login"
         method="POST"
         style={{ marginTop: '30px' }}
