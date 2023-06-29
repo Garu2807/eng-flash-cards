@@ -4,7 +4,7 @@ const Layout = require('./Layout');
 function LoginForm({ user }) {
     return(
         <Layout user={user}>
-            <form action='/login' id="form-login"  method='POST'>
+            <form action='/api/auth/login' id="form-login"  method='POST'>
                 <h2>Авторизация</h2>
                 <div>
                     <label>
@@ -22,6 +22,7 @@ function LoginForm({ user }) {
                     Войти
                 </button>
             </form>
+            <script defer src="/js/auth.js" />
         </Layout>
 
     );
