@@ -1,5 +1,4 @@
 const React = require('react');
-
 function Header({ user }) {
   let contentNavBar;
   if (user) {
@@ -10,7 +9,12 @@ function Header({ user }) {
         <a className="btn btn-info" href="/profile">
           Профиль
         </a>
+        <a href="/topic" className="btn btn-info">
+          Выбор темы
+        </a>
+        <a href="/logout" className="btn btn-dark">
         <a className="btn btn-info" href="/logout">
+
           Выйти
         </a>
       </>
@@ -28,7 +32,6 @@ function Header({ user }) {
       </>
     );
   }
-
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-light bg-white justify-content-between">
