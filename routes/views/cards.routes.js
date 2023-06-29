@@ -1,17 +1,22 @@
 const router = require('express').Router();
-const TopicPage = require('../../components/pages/TopicPage');
-const { Topic } = require('../../db/models');
+const CardsPage = require('../../components/pages/CardsPage');
+const { Card, Topic } = require('../../db/models');
 
-router.get('/topic/:id', async (req, res) => {
+
+router.get('/:id/cards', async (req, res) => {
   try {
     const { id } = req.params;
     const topic = await Topic.findOne({
       where: {
         id: id,
       },
+      include:{
+        model: Card
+      }
     });
-  
-    res.send(res.renderComponent(TopicPage, { topic }));
+
+
+    res.send(res.renderComponent(CardsPage, { topic, cards: topic.Cards }));
   } catch (error) {
     console.log(error.message);
     res.status(500).send(error.message);

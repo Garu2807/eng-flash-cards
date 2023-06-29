@@ -10,10 +10,9 @@ const getUser = require('./middlewares/getUser');
 const configSession = require('./config/configSession');
 
 const mainRouter = require('./routes/views/main.routes');
-const registerRouter = require('./routes/views/reglog.routes');
 const authRouter = require('./routes/api/auth.routes')
-const topicRouter = require('./routes/views/topic.routes')
-const themesRouter = require('./routes/api/themes.routes')
+const cardRouter = require('./routes/views/cards.routes')
+
 const app = express();
 const PORT = 3000;
 
@@ -25,13 +24,12 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.json());
 
-app.use(getUser);
 app.use(ssr);
+app.use(getUser);
 app.use('/', mainRouter);
-app.use('/', registerRouter);
 app.use('/api/auth', authRouter);
-app.use('/',topicRouter);
-app.use('/', themesRouter)
+app.use('/topic', cardRouter)
+
 
 
 

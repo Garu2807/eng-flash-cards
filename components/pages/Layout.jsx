@@ -1,7 +1,7 @@
 const React = require('react');
 const Header = require('./Header');
 
-function Layout({ title, children }) {
+function Layout({ title, children, user }) {
   return (
     <html lang="ru">
       <head>
@@ -21,7 +21,7 @@ function Layout({ title, children }) {
         <script defer src="/js/auth.js" />
       </head>
       <body>
-        <Header />
+        <Header user={user} />
         {children}
       </body>
     </html>

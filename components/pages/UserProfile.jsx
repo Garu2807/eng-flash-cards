@@ -3,7 +3,7 @@ const Layout = require('./Layout')
 
 function UserProfile(user) {
     return (
-        <Layout title="Flashcards">
+        <Layout user={user} title="Flashcards">
             <div>
                 <h2>{user.login}</h2>
             </div>

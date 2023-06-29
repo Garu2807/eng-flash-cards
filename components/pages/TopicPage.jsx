@@ -1,15 +1,16 @@
 const React = require('react')
+const Layout = require("./Layout");
 
-function TopicPage({ topics }) {
+function TopicPage({ topics, user }) {
     return (
-        <Layout title="eng-flash-cards">
+        <Layout user={user}>
             <div className="container">
                 <h2> Выбери тему</h2>
                 <div>
                     <div id="topic-container">
                         {topics.map((topic) => (
                             <div>
-                                <a href={`/topic/${topic.id}`}>
+                                <a href={`/topic/${topic.id}/cards`}>
                                     <h2>{topic.topic}</h2>
                                 </a>
                             </div>
