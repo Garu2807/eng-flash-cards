@@ -22,7 +22,7 @@ router.post('/register', async(req,res) => {
         req.session.userId = newUser.id;
         res.locals.user = newUser;
 
-        res.status(201).json({ message: 'ok' });
+        res.status(201).json({ message: 'success' });
       } else {
         res.status(400).json({ message: 'Такой пользователь уже существует' });
       }

@@ -12,6 +12,7 @@ const configSession = require('./config/configSession');
 const mainRouter = require('./routes/views/main.routes');
 const authRouter = require('./routes/api/auth.routes')
 const cardRouter = require('./routes/views/cards.routes')
+const addRouter = require('./routes/api/add.routes')
 
 const app = express();
 const PORT = 3000;
@@ -29,7 +30,7 @@ app.use(getUser);
 app.use('/', mainRouter);
 app.use('/api/auth', authRouter);
 app.use('/topic', cardRouter)
-
+app.use('/api/card', addRouter);
 
 
 

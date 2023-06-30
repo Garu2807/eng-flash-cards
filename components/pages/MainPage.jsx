@@ -5,7 +5,7 @@ function MainPage({ user }) {
   return (
     <Layout  user={user} title="name">
       <h1>Привет!</h1>
-      <h2>Что бы продолжить - зарегистрируйся или войди</h2>
+      <h2>Чтобы продолжить - зарегистрируйся или войди</h2>
     </Layout>
   );
 }

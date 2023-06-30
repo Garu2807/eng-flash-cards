@@ -26,6 +26,7 @@ function LoginForm({ user }) {
           Войти
         </button>
       </form>
+      <script defer src="/js/auth.js" />
     </Layout>
   );
 }
