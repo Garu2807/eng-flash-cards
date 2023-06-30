@@ -9,7 +9,7 @@ function TopicPage({ topics, user }) {
 
         <div id="topic-container">
           {topics.map((topic) => (
-            <div className="card-back">
+            <div className="top">
               <a href={`/topic/${topic.id}/cards`}>
                 <h2>{topic.topic}</h2>
               </a>

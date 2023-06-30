@@ -23,6 +23,7 @@ function Layout({ title, children, user }) {
         />
         <link rel="stylesheet" href="/css/style.css" />
         <script defer src="/js/auth.js" />
+        <script defer src="/js/card.js" />
       </head>
       <body>
         <Header user={user} />

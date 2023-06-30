@@ -69,8 +69,9 @@ a {
 }
 .translate {
   font-weight: 600;
+  margin-top: 70px;
 }
-.card-back {
+.top {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,7 +82,6 @@ a {
 }
 .cards-container {
   text-align: center;
-  width: 320px;
   margin: 20px auto;
   -webkit-perspective: 1200;
   perspective: 1200;
@@ -89,6 +89,10 @@ a {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  display: flex;
+  justify-content: space-between;
+  width: 1013px;
+  flex-wrap: wrap;
 }
 .flipper {
   position: relative;
@@ -101,6 +105,7 @@ a {
   -moz-transition: 0.7s linear;
   -o-transition: 0.7s linear;
   transition: 0.7s linear;
+  margin-bottom: 50px;
 }
 .card-front,
 .card-back {
@@ -115,6 +120,9 @@ a {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .card-front {
   z-index: 2;
@@ -125,6 +133,8 @@ a {
   background: white;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #f5f5f5;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .card-front word {
   color: #818285;
@@ -136,6 +146,10 @@ a {
   transform: rotateY(-180deg);
   background: #dcb8b2;
   color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .back h3 {
   position: relative;
@@ -153,14 +167,29 @@ a {
 .back p {
   padding-top: 15px;
 }
-.cards-container:hover .flipper {
+
+.flipper-rotate {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-.cards-container {
-  display: flex;
-  justify-content: space-between;
-  width: 1080px;
+.flipper-rotate-undo {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.container {
+  width: 1200px;
+}
+
+.red-background {
+  background: red;
+}
+.btn-success {
+  margin-top: 20px;
+}
+.back-btn {
+  margin-top: 20px;
 }
