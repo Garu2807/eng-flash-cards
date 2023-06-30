@@ -7,16 +7,27 @@ function CardsPage({ cards, topic, user }) {
       <h1>{topic.topic}</h1>
       <div class="container">
         <div className="cards-container">
-          {cards.map((card) => (
-            <div className="flipper">
-              <div className="card-front">
-                <div className="word">{card.word}</div>
-              </div>
-              <div className="card-back">
-                <div className="translate"> {card.translate}</div>
-              </div>
-            </div>
-          ))}
+          {cards.map((card) => {
+            if (!card.users[0].Statistics.dataValues.studied) {
+              return (
+                <div className="flipper" data-card-id={card.id}>
+                  <div className="card-front">
+                    <div className="word">{card.word}</div>
+                    <button type="button" class="btn btn-success translate-btn">
+                      Посмотреть перевод
+                    </button>
+                  </div>
+                  <div className="card-back">
+                    <div className="translate"> {card.translate}</div>
+                    <button type="button" class="btn btn-success studied-btn">
+                      Изучено
+                    </button>
+                    <img src="/images/icon.png" alt="" className="back-btn" />
+                  </div>
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     </Layout>

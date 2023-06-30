@@ -33,7 +33,6 @@ module.exports = (sequelize, DataTypes) => {
         onDelete: 'CASCADE',
       },
       studied: {
-        allowNull: false,
         defaultValue: false,
         type: DataTypes.BOOLEAN,
       },
