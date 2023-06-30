@@ -25,22 +25,7 @@ router.get('/:id/cards', async (req, res) => {
       },
     });
 
-    const data = topic.Cards.reduce((acc, { id }) => {
-      acc.push({
-        card_id: id,
-        user_id: req.session.userId,
-        studied: false,
-      });
-      return acc;
-    }, []);
-
-    const check = await Statistic.findOne({
-      where: { user_id: req.session.userId },
-    });
-
-    if (!check) {
-      const create = await Statistic.bulkCreate(data);
-    }
+    await user.addCards(topic.Cards, { through: { studied: false } });
 
     const topicNew = await Topic.findOne({
       where: {
@@ -64,7 +49,7 @@ router.get('/:id/cards', async (req, res) => {
       },
     });
 
-    console.log(topicNew.Cards);
+    console.log(topicNew);
 
     res.send(res.renderComponent(CardsPage, { topic, cards: topicNew.Cards }));
   } catch (error) {

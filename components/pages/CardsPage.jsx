@@ -8,6 +8,7 @@ function CardsPage({ cards, topic, user }) {
       <div className="container">
         <div className="cards-container">
           {cards.map((card) => {
+            console.log(card, '<<<<<<');
             if (!card.users[0].Statistics.dataValues.studied) {
               return (
                 <div className="flipper" data-card-id={card.id}>
