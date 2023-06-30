@@ -64,12 +64,15 @@ a {
   display: flex;
   justify-content: space-between;
 } */
+
 .word {
-  font-weight: 600;
+  font-weight: 900;
+  font-size: 32px;
 }
 .translate {
-  font-weight: 600;
+  font-weight: 900;
   margin-top: 70px;
+  font-size: 32px;
 }
 .top {
   display: flex;
@@ -191,5 +194,22 @@ a {
   margin-top: 20px;
 }
 .back-btn {
+  margin-top: 20px;
+}
+input {
+  border-radius: 15px;
+}
+.eng {
+  margin-top: 23px;
+}
+input .word {
+  margin-left: 20px;
+  border-radius: 20px;
+}
+
+.fig {
+  width: 700px;
+}
+.ru {
   margin-top: 20px;
 }

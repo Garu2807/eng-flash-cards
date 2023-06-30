@@ -21,28 +21,38 @@ function UserProfile({ user, cards, topics }) {
           <div>
             Тема:
             <select name="topic" required>
-            {topics.map((topic) => (
-              <option value={topic.id}>{topic.topic}</option>
-            ))}
-          </select>
+              {topics.map((topic) => (
+                <option value={topic.id}>{topic.topic}</option>
+              ))}
+            </select>
           </div>
-          <div>
+          <div className="eng">
             Слово на английском языке:
             <input name="word" required />
           </div>
-          <div>
+          <div className="ru">
             Слово на русском языке:
             <input name="translate" required />
           </div>
-          <button type="submit">Готово</button>
+          <button type="submit" className="btn btn-success">
+            Готово
+          </button>
         </form>
       </div>
-    <div id ='topic-container' >
-      {cards.map((card) => (
-        <Card card={card} />
-      ))}
-
-</div>
+      <div
+        id="topic-container"
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          maxWidth: '100%',
+          gap: '10px',
+          flexWrap: 'wrap',
+        }}
+      >
+        {cards.map((card) => (
+          <Card card={card} />
+        ))}
+      </div>
       <script defer src="/js/addcard.js" />
     </Layout>
   );
