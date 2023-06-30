@@ -5,7 +5,7 @@ function CardsPage({ cards, topic, user }) {
   return (
     <Layout user={user}>
       <h1>{topic.topic}</h1>
-      <div class="container">
+      <div className="container">
         <div className="cards-container">
           {cards.map((card) => {
             if (!card.users[0].Statistics.dataValues.studied) {

@@ -12,9 +12,7 @@ function Header({ user }) {
         <a href="/topic" className="btn btn-info">
           Выбор темы
         </a>
-        <a href="/logout" className="btn btn-dark">
-        <a className="btn btn-info" href="/logout">
-
+        <a className="btn btn-dark" href="/logout">
           Выйти
         </a>
       </>
@@ -22,7 +20,7 @@ function Header({ user }) {
   } else {
     contentNavBar = (
       <>
-        <div className="nav-item nav-link">Привет!</div>
+        <div className="nav-item nav-link"></div>
         <a className="btn btn-sm btn-outline-primary" href="/register">
           Регистрация
         </a>
@@ -42,7 +40,7 @@ function Header({ user }) {
           </a>
           <div className="navbar-nav">{contentNavBar}</div>
           <button
-            class="navbar-toggler collapsed"
+            className="navbar-toggler collapsed"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -50,7 +48,7 @@ function Header({ user }) {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
         </div>
       </nav>
